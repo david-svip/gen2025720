@@ -1,17 +1,17 @@
 const Koa = require('koa')
-const https = require('https')
+// const https = require('https')
 const Router = require('koa-router');
 const cors2 = require('koa2-cors');
-const webpush = require('web-push');
-const remarkAdapter = require('./dao/data-adapter');
+// const webpush = require('web-push');
+// const remarkAdapter = require('./dao/data-adapter');
 const {koaBody} = require('koa-body');
 const videoRoute = require('./routes/video-test.js');
 const mainRoute = require('./routes/main-router.js');
-const spiderRoute = require('./routes/spider-router.js');
-const combineServices = require('./dao/combine-services.js');
+// const spiderRoute = require('./routes/spider-router.js');
+// const combineServices = require('./dao/combine-services.js');
 const staticServe = require('koa-static');
 const path = require('path');
-const fs = require('fs')
+// const fs = require('fs')
 
 const staticPath = path.join(__dirname, 'assets');
 
@@ -48,7 +48,6 @@ app.use(koaBody({multipart:true},uploadDir));
 app.use(staticServe(staticPath));
 
 app
-  .use(spiderRoute.routes())
   .use(mainRoute.routes())
   .use(videoRoute.routes())
   .use(router.routes())
