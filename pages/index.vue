@@ -11,6 +11,10 @@
 <script setup lang="ts">
 const linkList = [
   {
+    url:'/images',
+    name:'懒加载'
+  },
+  {
     url:'/server-side-render',
     name:'服务器端渲染与皮肤替换'
   },
