@@ -1,27 +1,29 @@
 {
-  "name": "faker-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@koa/cors": "^5.0.0",
-    "buffer": "^6.0.3",
-    "file-url": "^4.0.0",
-    "http-proxy": "^1.18.1",
-    "koa": "^2.15.3",
-    "koa-body": "^6.0.1",
-    "koa-bodyparser": "^4.4.1",
-    "koa-router": "^13.0.1",
-    "koa-static": "^5.0.0",
-    "koa2-cors": "^2.0.6",
-    "puppeteer": "^24.2.1",
-    "web-push": "^3.6.7"
+    "@smallwei/avue": "^3.6.2",
+    "element-plus": "^2.9.4",
+    "hls.js": "^1.5.20",
+    "nuxt": "^3.15.4",
+    "pinia": "^2.3.1",
+    "pinia-plugin-persistedstate": "^4.2.0",
+    "three": "^0.174.0",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@vant/nuxt": "^1.0.6",
+    "crypto-js": "^4.2.0",
+    "stylus": "^0.64.0",
+    "stylus-loader": "^8.1.1"
   }
 }
