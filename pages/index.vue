@@ -37,6 +37,10 @@ const linkList = [
   {
     url:'/ai-game',
     name:'测试ai生成代码'
+  },
+  {
+    url:'/player',
+    name:'视频解密'
   }
 ];
 </script>
