@@ -11,14 +11,16 @@
   },
   "dependencies": {
     "@smallwei/avue": "^3.6.2",
+    "@vue/compiler-sfc": "^3.4.21",
     "element-plus": "^2.9.4",
     "hls.js": "^1.5.20",
     "nuxt": "^3.15.4",
     "pinia": "^2.3.1",
     "pinia-plugin-persistedstate": "^4.2.0",
     "three": "^0.174.0",
-    "vue": "latest",
-    "vue-router": "latest"
+    "vue": "^3.4.21",
+    "vue-router": "latest",
+    "vue3-virtual-scroller": "^0.2.3"
   },
   "devDependencies": {
     "@vant/nuxt": "^1.0.6",

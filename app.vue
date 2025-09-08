@@ -11,9 +11,10 @@ import {onMounted} from 'vue'
 import 'vant/lib/index.css'
 import { storeToRefs } from 'pinia'
 import {useGlobalStore} from './stores/globalStore'
+import 'vue3-virtual-scroller/dist/vue3-virtual-scroller.css';
 
 const globalStor = useGlobalStore()
-globalStor.getHomeJsonAction()
+// globalStor.getHomeJsonAction()
 const {
   appConfig,
   appData,
