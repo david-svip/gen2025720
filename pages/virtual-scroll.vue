@@ -36,13 +36,16 @@
         </div>
       </template>
     </RecycleScroller>
-    
+    <div v-if="pageDataLoading" class="data-loading">
+      <van-loading />
+    </div>
     <div class="triangle-up" :class="{show:showGotop}" @click="goTop"></div>
 
   </div>
 </template>
 
 <script lang="ts" setup>
+import { sleep } from '../utils/index'
 import { RecycleScroller } from 'vue3-virtual-scroller';
 
 interface dataItem{
@@ -83,9 +86,12 @@ const dataInit = () => {
     }
   })
 }
-const page = ref(1);
-const getDataPage = (currPage:number) => {
+const page = ref(1),pageDataLoading = ref(0);
+const getDataPage = async (currPage:number) => {
   const size = 40;
+  pageDataLoading.value = 1;
+  await sleep(2000);
+  pageDataLoading.value = 0;
   page.value = currPage;
   const start = (page.value - 1) * size;
   const end = start + size;
@@ -127,9 +133,26 @@ const goTop = () => {
 
 </script>
 
+<style lang="stylus">
+.data-loading{
+  .van-loading__circular{
+    color:black;
+  }
+}
+</style>
+
 <style lang="stylus" scoped>
 .scroll-wrapper{
   padding:25px 0 100px 0;
+  position:relative;
+  .data-loading{
+    text-align:center;
+    padding:0 0 20px 0;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+  }
   .sc-d-item{
     width:90%;
     height:auto;
