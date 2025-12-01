@@ -11,6 +11,10 @@
 <script setup lang="ts">
 const linkList = [
   {
+    url:'/videojs',
+    name:'video.js'
+  },
+  {
     url:'/images',
     name:'懒加载'
   },
