@@ -11,6 +11,10 @@
 <script setup lang="ts">
 const linkList = [
   {
+    url:'/border',
+    name:'多样式边框'
+  },
+  {
     url:'/videojs',
     name:'video.js'
   },
