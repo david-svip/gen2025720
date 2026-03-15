@@ -88,10 +88,10 @@
   background: conic-gradient(
     purple,
     yellow,
+    red,
     black,
     black,
-    purple,
-    yellow
+    purple
   );
   animation: rotate 4s linear infinite;
 }
