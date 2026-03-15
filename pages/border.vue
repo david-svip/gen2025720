@@ -87,25 +87,24 @@
   height: 300%;
   background: conic-gradient(
     purple,
+    yellow,
     black,
     black,
-    black,
-    black,
-    black,
-    purple
+    purple,
+    yellow
   );
   animation: rotate 4s linear infinite;
 }
 
 .rotate-box span {
-  width: 98%;
-  height: 98%;
+  width: 97%;
+  height: 97%;
   position: relative;
   z-index: 1;
   background: #111;
   padding: 40px 80px;
   border-radius: 8px;
-  color: white;
+  color:white;
 }
 
 @keyframes rotate {
