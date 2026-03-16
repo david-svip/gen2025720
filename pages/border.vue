@@ -1,5 +1,5 @@
 <template>
-  <div class="border-wrap">
+  <div class="border-wrap star-bg">
     
     <div class="area">
       <div class="glow-box">Glow Border</div>
@@ -21,6 +21,10 @@
     <div class="area">
 
     </div>
+
+    <div class="cube">
+      <div></div>
+    </div>
   </div>
 </template>
 
@@ -29,6 +33,49 @@
 </script>
 
 <style scoped lang="stylus">
+.cube {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: rotateCube 5s linear infinite;
+}
+
+.cube div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #ff0, #f0f);
+  opacity: 0.8;
+  border: 1px solid #fff;
+}
+@keyframes rotateCube {
+  0% { transform: rotateX(0) rotateY(0); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.star-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+.star-bg::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white, transparent 2px) repeat;
+  background-size: 20px 20px;
+  animation: moveStars 10s linear infinite;
+}
+
+@keyframes moveStars {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
 .border-wrap{
   height:600px;
   display:flex;
